@@ -1,13 +1,14 @@
-// import css from './Options.module.css';
+import css from './Options.module.css';
 
-const Options = () => {
+const Options = ({onClick, total, onClickReset}) => {
+
   return (
-    <>
-      <button type="click">Good</button>
-      <button type="click">Neutral</button>
-      <button type="click">Bad</button>
-      <button type="click">Reset</button>
-    </>
+    <div className={css.block}>
+      <button type="click" name="good" onClick={onClick}>Good</button>
+      <button type="click" name="neutral" onClick={onClick}>Neutral</button>
+      <button type="click" name="bad" onClick={onClick}>Bad</button>
+      {total > 0 &&  <button type="click" name="reset" onClick={onClickReset}>Reset</button>}
+    </div>
   );
 };
 

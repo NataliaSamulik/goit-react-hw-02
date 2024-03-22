@@ -1,15 +1,15 @@
-// import css from './Feedback.module.css'
+import css from './Feedback.module.css'
 
-const Feedback = ({good, neutral, bad, total, positive}) => {
+const Feedback = ({ good, neutral, bad, total, positive }) => {
   return (
     <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive: {positive}%</p>
+      <p className={css.textFeedback}>Good: {good}</p>
+      <p className={css.textFeedback}>Neutral: {neutral}</p>
+      <p className={css.textFeedback}>Bad: {bad}</p>
+      <p className={css.textFeedback}>Total: {total}</p>
+      <p className={css.textFeedback}>Positive: {positive}%</p>
     </>
   );
 };
 
-export default Feedback
+export default Feedback;
